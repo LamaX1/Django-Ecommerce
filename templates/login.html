@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Login{% endblock %} 
+
+{% block content %}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder" style="color: #eee;">Login</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Login to your account</p>
+        </div>
+    </div>
+</header>
+
+<!-- Section: Design Block -->
+<section class="text-center mt-3">
+    <!-- Background image -->
+  
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+          margin-top: -100px;
+          background: hsla(0, 0%, 100%, 0.8);
+          backdrop-filter: blur(30px);
+          ">
+      <div class="card-body py-5 px-md-5">
+  
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-5">login</h2>
+            <form method="POST" action="{% url 'login' %}">  
+                {% csrf_token %}
+                <!-- username input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="username">Username</label>
+                    <input type="text" id="username" class="form-control" name="username" />
+                </div>
+    
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" id="password" class="form-control" name="password"/>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-outline-dark btn-block mb-4">
+                    Login
+                </button>
+                <div class="pt-2">
+                    <strong>Do not have an account! <a href="{% url 'register' %}" style="color: #3930c4;">Register Now</a></strong>
+                </div>
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+{% endblock %}

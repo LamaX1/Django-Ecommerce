@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %} 
+
+{% block content %}
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder" style="color: #eee;">Explore The Latest Technology</h1>
+            <p class="lead fw-normal text-white-50 mb-0">Be The First</p>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row text-center d-flex justify-content-center mt-5">
+       <div class="col-sm-3">
+           <a href="{% url 'showPhones' %}" style="text-decoration: none;">
+               <div class="card" >
+                   <div class="card-body"style="background-color: rgb(185, 154, 114);">
+                       <i class="bi bi-phone text-center card-icon" style="font-size: 3rem;"><h6>Smart Phones</h6></i>
+                   </div>
+               </div>
+           </a>
+       </div>
+       <div class="col-sm-3">
+           <a href="{% url 'showComputers' %}" style="text-decoration: none;">
+               <div class="card">
+                   <div class="card-body" style="background-color: rgb(114, 185, 152);">
+                       <i class="bi bi-laptop text-center card-icon" style="font-size: 3rem;"><h6>Computers</h6></i>
+                   </div>
+               </div>
+           </a>
+       </div>
+   </div>
+   <div class="row text-center d-flex justify-content-center mt-3">
+       <div class="col-sm-3">
+           <a href="" style="text-decoration: none;">
+               <div class="card">
+                   <div class="card-body"style="background-color: rgb(114, 136, 185);">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Coming Soon</div>
+                       <i class="bi bi-tablet text-center card-icon" style="font-size: 3rem;"><h6>Tablets</h6></i>
+                   </div>
+               </div>
+           </a>
+       </div>
+       <div class="col-sm-3">
+           <a href="" style="text-decoration: none;">
+               <div class="card">
+                   <div class="card-body" style="background-color: rgb(185, 114, 123);">
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Coming Soon</div>
+                       <i class="bi bi-tv text-center card-icon" style="font-size: 3rem;"><h6>TVs</h6></i>
+                   </div>
+               </div>
+           </a>
+       </div>
+   </div>
+</div>
+{% endblock %}
